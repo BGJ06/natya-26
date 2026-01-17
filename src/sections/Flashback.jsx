@@ -1,26 +1,40 @@
 import React, { useState, useRef } from 'react';
 import SectionWrapper from '../components/SectionWrapper';
 import GlassCard from '../components/GlassCard';
-import { Volume2, VolumeX } from 'lucide-react';
+import { Volume2, VolumeX, Play, Pause } from 'lucide-react';
 
 const VideoCard = ({ item }) => {
     const [isMuted, setIsMuted] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(true);
     const videoRef = useRef(null);
     const bgVideoRef = useRef(null);
 
     const toggleMute = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (videoRef.current) {
             videoRef.current.muted = !videoRef.current.muted;
             setIsMuted(!isMuted);
         }
     };
 
-    // Sync background video with main video if needed, though autoplay is usually enough
+    const togglePlay = (e) => {
+        e.preventDefault();
+        if (videoRef.current) {
+            if (isPlaying) {
+                videoRef.current.pause();
+                if (bgVideoRef.current) bgVideoRef.current.pause();
+            } else {
+                videoRef.current.play();
+                if (bgVideoRef.current) bgVideoRef.current.play();
+            }
+            setIsPlaying(!isPlaying);
+        }
+    };
 
     return (
         <GlassCard className="p-2 group hover:scale-105 transition-transform duration-300 relative">
-            <div className="relative aspect-video rounded-xl overflow-hidden bg-black">
+            <div className="relative aspect-video rounded-xl overflow-hidden bg-black" onClick={togglePlay}>
                 {/* Background Blurred Video */}
                 <video
                     ref={bgVideoRef}
@@ -43,13 +57,24 @@ const VideoCard = ({ item }) => {
                     className="relative w-full h-full object-contain z-10 shadow-lg -rotate-90 scale-[2]"
                 />
 
-                {/* Audio Control */}
-                <button
-                    onClick={toggleMute}
-                    className="absolute bottom-3 right-3 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all z-20 opacity-0 group-hover:opacity-100"
-                >
-                    {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                </button>
+                {/* Controls Container */}
+                <div className="absolute bottom-3 right-3 flex gap-2 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {/* Play/Pause Control */}
+                    <button
+                        onClick={togglePlay}
+                        className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all"
+                    >
+                        {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                    </button>
+
+                    {/* Audio Control */}
+                    <button
+                        onClick={toggleMute}
+                        className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all"
+                    >
+                        {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                    </button>
+                </div>
 
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 pointer-events-none z-20">
                     <p className="text-white font-medium">{item.caption}</p>
