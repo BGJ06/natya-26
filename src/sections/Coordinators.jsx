@@ -10,9 +10,11 @@ const ContactRow = ({ name, number, role }) => (
         </div>
         <div>
             <h4 className="font-semibold text-white">{name}</h4>
-            <a href={`tel:${number.replace(/\s/g, '').replace(/-/g, '')}`} className="text-sm text-gray-400 hover:text-neon-pink transition-colors">
-                {number}
-            </a>
+            {number && (
+                <a href={`tel:${number.replace(/\s/g, '').replace(/-/g, '')}`} className="text-sm text-gray-400 hover:text-neon-pink transition-colors">
+                    {number}
+                </a>
+            )}
         </div>
     </div>
 );
@@ -57,10 +59,12 @@ const Coordinators = () => {
                     </div>
                     <div className="space-y-2">
                         <ContactRow name="Mr. S. Pradeep Kumar" number="96007 32145" />
+                        <ContactRow name="Mr. D. Asir" />
+                        <ContactRow name="Mrs. E. Vijayalakshmi" />
                     </div>
                 </GlassCard>
             </div>
-        </SectionWrapper>
+        </SectionWrapper >
     );
 };
 
