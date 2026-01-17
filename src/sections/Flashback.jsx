@@ -62,9 +62,9 @@ const VideoCard = ({ item }) => {
 const Flashback = () => {
     // Video data for flashback section
     const memories = [
-        { id: 1, src: "/videos/flashback-1.mp4", caption: "Natya '25" },
-        { id: 2, src: "/videos/flashback-2.mp4", caption: "Group Dance" },
-        { id: 3, src: "/videos/flashback-3.mp4", caption: "Crowd Cheering" },
+        { id: 1, src: "videos/flashback-1.mp4", caption: "Natya '25" },
+        { id: 2, src: "videos/flashback-2.mp4", caption: "Group Dance" },
+        { id: 3, src: "videos/flashback-3.mp4", caption: "Crowd Cheering" },
     ];
 
     return (

@@ -26,7 +26,7 @@ const VideoBackground = () => {
             </div>
 
             {/* Grid Pattern Overlay */}
-            <div className="absolute inset-0 bg-[url('/images/grid.svg')] opacity-10 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-[url('images/grid.svg')] opacity-10 mix-blend-overlay" />
 
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
