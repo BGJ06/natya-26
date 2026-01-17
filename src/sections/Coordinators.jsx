@@ -56,9 +56,7 @@ const Coordinators = () => {
                         <h3 className="text-2xl font-bold text-white">Staff Co-Ordinators</h3>
                     </div>
                     <div className="space-y-2">
-                        <ContactRow name="Mr. D. Asir" number="82482 80673" />
                         <ContactRow name="Mr. S. Pradeep Kumar" number="96007 32145" />
-                        <ContactRow name="Mrs. E. Vijayalakshmi" number="89460 22113" />
                     </div>
                 </GlassCard>
             </div>

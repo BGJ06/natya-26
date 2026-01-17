@@ -5,6 +5,7 @@ import Hero from './sections/Hero';
 import DanceEvents from './sections/DanceEvents';
 import Highlights from './sections/Highlights';
 import Flashback from './sections/Flashback';
+import Rules from './sections/Rules';
 import Coordinators from './sections/Coordinators';
 import CTASection from './sections/CTASection';
 
@@ -24,6 +25,7 @@ function App() {
         <DanceEvents />
         <Highlights />
         <Flashback />
+        <Rules />
         <Coordinators />
         <CTASection />
 
