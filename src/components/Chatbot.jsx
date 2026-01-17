@@ -77,6 +77,8 @@ const Chatbot = () => {
             botResponse = "Namaste! Excited for Natya '26? Ask me anything about the event!";
         } else if (lowerText.match(/trophy|prize|win|reward/)) {
             botResponse = "There are exciting cash prizes and the Overall Trophy awaits the best team!";
+        } else if (lowerText.match(/owner|created|creator|made|developer|built|who/)) {
+            botResponse = "The owner of the site is bgj and he is none other than Mithun of 2nd Ads of KCET";
         }
 
         setTimeout(() => {
