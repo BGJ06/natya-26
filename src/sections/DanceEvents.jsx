@@ -4,11 +4,11 @@ import GlassCard from '../components/GlassCard';
 
 const DanceEvents = () => {
     const events = [
-        { name: "Mudra Mystique", subtitle: "(Solo Classical)", image: "/images/mudra.png", color: "from-purple-500 to-indigo-500" },
-        { name: "Freestyle Flare", subtitle: "(Solo Western)", image: "/images/freestyle.png", color: "from-pink-500 to-rose-500" },
-        { name: "Duo Blaze", subtitle: "", image: "/images/duo.png", color: "from-amber-500 to-orange-500" },
-        { name: "Folk Fiesta", subtitle: "(Group Folk)", image: "/images/folk.png", color: "from-emerald-500 to-teal-500" },
-        { name: "Dynamix Crew", subtitle: "(Group Western)", image: "/images/dynamix.png", color: "from-red-500 to-orange-500" },
+        { name: "Mudra Mystique", subtitle: "(Solo Classical)", image: "images/mudra.png", color: "from-purple-500 to-indigo-500" },
+        { name: "Freestyle Flare", subtitle: "(Solo Western)", image: "images/freestyle.png", color: "from-pink-500 to-rose-500" },
+        { name: "Duo Blaze", subtitle: "", image: "images/duo.png", color: "from-amber-500 to-orange-500" },
+        { name: "Folk Fiesta", subtitle: "(Group Folk)", image: "images/folk.png", color: "from-emerald-500 to-teal-500" },
+        { name: "Dynamix Crew", subtitle: "(Group Western)", image: "images/dynamix.png", color: "from-red-500 to-orange-500" },
     ];
 
     return (
