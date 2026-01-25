@@ -66,11 +66,11 @@ const Rules = () => {
                                                 <ul className="space-y-3 text-gray-300">
                                                     <li className="flex justify-between items-center border-b border-white/5 pb-2">
                                                         <span>Solo Song</span>
-                                                        <span className="font-mono text-neon-purple">3 to 4 mins</span>
+                                                        <span className="font-mono text-neon-purple">3 mins</span>
                                                     </li>
                                                     <li className="flex justify-between items-center border-b border-white/5 pb-2">
                                                         <span>Duo Song</span>
-                                                        <span className="font-mono text-neon-purple">3 to 4 mins</span>
+                                                        <span className="font-mono text-neon-purple">3 mins</span>
                                                     </li>
                                                     <li className="flex justify-between items-center">
                                                         <span>Group Dance</span>
