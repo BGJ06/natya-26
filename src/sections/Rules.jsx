@@ -65,11 +65,11 @@ const Rules = () => {
                                             <div className="pt-4 pl-12 pb-2">
                                                 <ul className="space-y-3 text-gray-300">
                                                     <li className="flex justify-between items-center border-b border-white/5 pb-2">
-                                                        <span>Solo Song</span>
+                                                        <span>Solo Dance</span>
                                                         <span className="font-mono text-neon-purple">3 mins</span>
                                                     </li>
                                                     <li className="flex justify-between items-center border-b border-white/5 pb-2">
-                                                        <span>Duo Song</span>
+                                                        <span>Duo Dance</span>
                                                         <span className="font-mono text-neon-purple">3 mins</span>
                                                     </li>
                                                     <li className="flex justify-between items-center">
