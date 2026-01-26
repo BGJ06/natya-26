@@ -31,8 +31,7 @@ const Coordinators = () => {
                     </div>
                     <div className="text-left">
                         <h3 className="text-xl font-bold text-neon-pink tracking-widest uppercase mb-1">Convenor</h3>
-                        <p className="text-2xl font-bold text-white">Dr. S. Luna Eunice</p>
-                        <a href="tel:9655984421" className="text-lg text-gray-400 hover:text-white transition-colors">96559 84421</a>
+                        <p className="text-2xl font-bold text-white">Dr. S. Senthil (Principal)</p>
                     </div>
                 </GlassCard>
             </div>
@@ -58,6 +57,7 @@ const Coordinators = () => {
                         <h3 className="text-2xl font-bold text-white">Staff Co-Ordinators</h3>
                     </div>
                     <div className="space-y-2">
+                        <ContactRow name="Dr. S. Luna Eunice" number="96559 84421" />
                         <ContactRow name="Mr. S. Pradeep Kumar" number="96007 32145" />
                         <ContactRow name="Mr. D. Asir" />
                         <ContactRow name="Mrs. E. Vijayalakshmi" />
